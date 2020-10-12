@@ -8,16 +8,15 @@
 
 ## API keys
 
-For dev or test
-*create .env file at the root and pass the values for 
+For dev or test => create .env file at the root and pass the values for 
 ```
 ACCESS_TOKEN=XXXX
 SPACE_ID=XXX
 ```
 For Prod
 ```
-*expose set ACCESS_TOKEN=
-*expose set SPACE_ID=
+expose set ACCESS_TOKEN=
+expose set SPACE_ID=
 ```
 
 ## How to Run
