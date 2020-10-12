@@ -1,0 +1,29 @@
+    <main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <p class="lead text-muted">Recipe Album</p>
+    </div>
+  </section>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <% @items.each do |item| %>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <%=link_to image_tag(item.photo.url height: '250', width: '500', alt: 'image', class: "card-img-top"), recipe_path(item.id) %>
+              <div class="card-body">
+                <p class="card-text"><%= item.title%></p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <%=link_to 'view', recipe_path(item.id), class:'btn btn-sm btn-outline-secondary'  %>
+                  </div>
+                  <small class="text-muted">Marley spoon..</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</main>
